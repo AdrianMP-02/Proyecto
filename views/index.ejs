@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Proyectos</title>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #34495e;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #3498db;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
+    .nav-link:hover {
+      color: #3498db;
+    }
+
+    .language-selector {
+      position: relative;
+      margin-right: 1rem;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .auth-buttons a {
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+
+    .login-btn {
+      background-color: transparent;
+      border: 1px solid white;
+    }
+
+    .register-btn {
+      background-color: #3498db;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>Gestor de Proyectos</h1>
+    </div>
+    <div class="nav-links">
+      <div class="dropdown">
+        <span class="nav-link">Producto</span>
+        <div class="dropdown-content">
+          <a href="#">Características</a>
+          <a href="#">Integraciones</a>
+          <a href="#">Seguridad</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="nav-link">Soluciones</span>
+        <div class="dropdown-content">
+          <a href="#">Empresas</a>
+          <a href="#">Equipos</a>
+          <a href="#">Startups</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="nav-link">Recursos</span>
+        <div class="dropdown-content">
+          <a href="#">Documentación</a>
+          <a href="#">Blog</a>
+          <a href="#">Soporte</a>
+        </div>
+      </div>
+      <a href="/precios" class="nav-link">Precios</a>
+
+      <div class="dropdown language-selector">
+        <span class="nav-link">🌐</span>
+        <div class="dropdown-content">
+          <a href="?lang=es">Español</a>
+        </div>
+      </div>
+
+      <div class="auth-buttons">
+        <a href="/login" class="nav-link login-btn">Iniciar Sesión</a>
+        <a href="/registro" class="nav-link register-btn">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <h2>Bienvenido al Gestor de Proyectos</h2>
+    <p>Organiza y gestiona tus proyectos de manera eficiente</p>
+  </main>
+</body>
+
+</html>
