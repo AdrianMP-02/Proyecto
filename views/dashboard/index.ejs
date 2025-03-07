@@ -116,7 +116,6 @@
             }
         }
 
-
         .sidebar h3 {
             color: #2c3e50;
             margin-bottom: 1.5rem;
@@ -274,11 +273,15 @@
                         </div>
                         <div class="stat-card">
                             <h3>Tareas Pendientes</h3>
-                            <p>5 tareas</p>
+                            <p>
+                                <%= estadisticas.tareas_pendientes %> tareas
+                            </p>
                         </div>
                         <div class="stat-card">
                             <h3>Próximos Vencimientos</h3>
-                            <p>2 esta semana</p>
+                            <p>
+                                <%= estadisticas.proximos_vencimientos %> esta semana
+                            </p>
                         </div>
                     </div>
     </main>
