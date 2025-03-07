@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
-const connection = require('./config/database');
+const connection = require('./src/config/database');
 const app = express();
 
 // Configuración básica
@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 
 // Configuración de sesión
 app.use(session({
-  secret: 'secreto-seguro-aqui',
-  resave: false,
-  saveUninitialized: true
+    secret: 'secreto-seguro-aqui',
+    resave: false,
+    saveUninitialized: true
 }));
 
 // Middleware para datos de usuario globales
@@ -42,10 +42,10 @@ const requireLogin = (req, res, next) => {
 };
 
 // Rutas
-const indexRoutes = require('./routes/index');
-const usuariosRoutes = require('./routes/usuarios');
-const proyectosRoutes = require('./routes/proyectos');
-const dashboardRoutes = require('./routes/dashboard');
+const indexRoutes = require('./src/routes/index');
+const usuariosRoutes = require('./src/routes/usuarios');
+const proyectosRoutes = require('./src/routes/proyectos');
+const dashboardRoutes = require('./src/routes/dashboard');
 
 app.use('/', indexRoutes);
 app.use('/', usuariosRoutes);
